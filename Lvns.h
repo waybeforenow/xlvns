@@ -435,6 +435,7 @@ void LvnsClearTextCursor(Lvns *lvns);
 void LvnsDrawTextCursor(Lvns *lvns);
 void LvnsDispWindow(Lvns *lvns);
 void LvnsDispText(Lvns *lvns);
+void LvnsUndispText(Lvns *lvns);
 void LvnsTextOff(Lvns *lvns);
 void LvnsTextOn(Lvns *lvns);
 
@@ -538,6 +539,7 @@ void mgLvnsCoreSetLvns(Lvns *);
 
 /* mgAction.c */
 void MglGetEvent(Lvns *, int);
+#endif
 
 /* sizuku.c */
 void SizukuInitialize(Lvns *);
@@ -547,6 +549,5 @@ void KizuatoInitialize(Lvns *);
 
 /* toheart.c */
 void ToHeartInitialize(Lvns *);
-#endif
 
 #endif

@@ -59,7 +59,7 @@ msf2lba (u_char m, u_char s, u_char f)
 	return (((m * 60) + s) * 75 + f) - 150;
 }
 
-#ifdef BSD
+#if 0
 #include <sys/cdio.h>
 
 /*

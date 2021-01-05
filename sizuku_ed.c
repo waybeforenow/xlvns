@@ -14,6 +14,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include "sizuku.h"
 
 extern u_char sizuku_haikei_palette[][4][3];

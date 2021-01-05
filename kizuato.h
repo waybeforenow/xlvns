@@ -67,6 +67,7 @@ void KizuatoEnding(Lvns *lvns);
 
 void KizuatoMergeCharacter(Lvns *lvns);
 void KizuatoClearScreen(Lvns *lvns);
+void KizuatoSetTextScenarioState(Lvns *lvns, int no);
 
 void KizuatoLoadCharacter(Lvns *lvns, int no, int pos);
 void KizuatoClearCharacter(Lvns *lvns, int pos);

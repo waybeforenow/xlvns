@@ -14,6 +14,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include "kizuato.h"
 
 /* うねうね sin_effect.h */

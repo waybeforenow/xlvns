@@ -120,6 +120,7 @@ extern LvnsBackEffectInfo toHeartSakuraEffect;
 
 /* toheart_rain.c */
 extern LvnsBackEffectInfo toHeartRainEffect;
+void ToHeartRainEffectInit(Lvns *lvns, int num);
 
 /* toheart_etc.c */
 void ToHeartMergeCharacter(Lvns *lvns);

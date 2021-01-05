@@ -717,7 +717,7 @@ LvnsCoreSetLvns(LvnsCoreWidget lcw, Lvns *lvns)
 	lvns->getFileTime          = GetFileTime;
 	lvns->flip                 = Flip;
 
-	LvnsInitialize(lvns, LCW.type, lcw);
+	LvnsInitialize(lvns, 2, lcw);
 	XtResizeWidget((Widget)lcw, WIDTH, HEIGHT, 0);
 }
 

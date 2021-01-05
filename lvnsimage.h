@@ -68,6 +68,7 @@ void lvnsimage_copy_area2(LvnsImage *src, LvnsImage *dst, int x, int y,
 void lvnsimage_add(LvnsImage *src, LvnsImage *dst, int x, int y);
 void lvnsimage_add2(LvnsImage *src, LvnsImage *dst, int x, int y);
 void lvnsimage_add3(LvnsImage *src, LvnsImage *dst, int x, int y, int pixoff, int transparent, int dummy);
+void lvnsimage_add4(LvnsImage *src, LvnsImage *dst, int x, int y, int pixoff);
 void lvnsimage_add_mask(LvnsImage *src, LvnsImage *dst, int x, int y, int idx_off, int mask);
 
 void lvnsimage_copy_mask_unit(LvnsImage *src, LvnsImage *dst, int x, int y, int mask);
@@ -87,5 +88,7 @@ void lvnsimage_copy_scale(LvnsImage *src, int sx, int sy, int sw, int sh,
                           LvnsImage *dst, int dx, int dy, int dw, int dh);
 
 void lvnsimage_box(LvnsImage *image, int x, int y, int w, int h, int idx);
+
+lvnsimage_set_sepia(LvnsImage *img);
 
 #endif

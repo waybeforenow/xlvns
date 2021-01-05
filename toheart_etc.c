@@ -14,6 +14,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "toheart.h"
 
 /*
@@ -442,7 +443,7 @@ static LvnsSystemState toheart_state_base = {
 void ToHeartInitialize(Lvns *lvns)
 {
     ToHeartState *state = 
-        (ToHeartState *)lvns->system_state = malloc(sizeof(ToHeartState));
+        lvns->system_state = malloc(sizeof(ToHeartState));
     state->state = toheart_state_base;
 
     state->sakura_num = 0;

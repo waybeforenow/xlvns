@@ -859,7 +859,7 @@ SRCS = $(OBJS:.o=.c)
 
 all:: xlvns
 
-xlvns: $(OBJS) $(DEPLIBS)
+xlvns: $(OBJS)
 	$(RM) $@
 	$(CCLINK) -o $@ $(LDOPTIONS) $(OBJS) $(LOCAL_LIBRARIES) $(LDLIBS)  $(EXTRA_LOAD_FLAGS)
 
