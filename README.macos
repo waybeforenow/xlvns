@@ -1,0 +1,65 @@
+All of the code and documentation in this repository (excluding this file) is
+property of its respective owner(s).
+
+I'm leaving you this brief note as a piece of documentation to instruct you how
+to compile and run XLVNS, at least as far as playing To Heart.
+
+==============================================================
+= A BRIEF NOTE ABOUT WHY THIS IS ACTUALLY SORT OF INCREDIBLE =
+==============================================================
+
+Quite surprisingly, the original C source of this program (which was first
+released at Summer Comiket over 20 years ago, and targeted the contemporary
+versions of 4.4BSD, Linux, and Solaris) successfully builds and runs on the
+latest version of macOS in 2021 without any major modifications.
+
+Taking into account the massive technological and cultural shifts which
+occurred in computing over the interceding timeframe, this is no small feat.
+Consider this: this repo does in fact contain hints at some efforts to properly
+port XLVNS to Macintosh - but I have _no idea_ how complete those efforts are,
+because the project files are now so hopelessly out of date that modern Xcode
+won't even deign to touch them.
+
+By contrast, the original XLVNS, which uses POSIX and X11 libraries whose APIs
+are still well-supported to this day, builds with barely any complaint. The
+sole (understandable) exception to this is the audio engine, which relied on the
+BSD kernel's bygone CD-Audio API.
+
+Therefore, with enormous gratitude to Leaf/AQUAPLUS, the original authors of
+XLVNS and its ports, and the system library maintainers without whose efforts
+this wouldn't be possible without an insane amount of work, please find below
+the instructions for building XLVNS and using it to play To Heart.
+
+================
+= INSTRUCTIONS =
+================
+
+- You will need GNU Make and GCC. Suitable versions of these programs are
+  distributed with Xcode:
+    https://developer.apple.com/xcode/
+
+- You will need XQuartz and its libraries and development headers for X11
+  support. All of this can be installed with Homebrew:
+    https://brew.sh/
+    $ brew install xquartz
+
+- Also, you will need the original game engine and data files from To Heart:
+    LVNS3.EXE
+    LVNS3DAT.PAK
+    LVNS3SCN.PAK
+
+- Once these dependencies are installed, you can compile XLVNS from the root
+  of this repository:
+    $ make xlvns CFLAGS="-Du_char=uint8_t -ansi -I/opt/X11/include"
+
+- Before you start XLVNS, please make sure you have started XQuartz.
+
+- Place the game engine and data files into the same folder as the `xlvns`
+  binary.
+
+- Run XLVNS:
+    $ ./xlvns
+
+
+Thanks for reading. If you see Multi, tell her I said hi.
+~ wbn 2021/01/05
