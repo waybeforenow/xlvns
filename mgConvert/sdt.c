@@ -22,11 +22,11 @@ static struct {
   int height;
   int pal;
 } sdt_list[] = {
-  {"OP1W.SDT", 336, 400, 1}, /* ¿Èƒ· */
-  {"OP2W.SDT", 448, 512, 1}, /*  ∞¥  */
-  {"OP3W.SDT", 448, 512, 2}, /*  …ˆ  */
-  {"OP4W.SDT", 336, 400, 2}, /* ΩÈ≤ª */
-  {"OP2_KM_W.SDT", 1280, 400, 0}, /* ±∆ */
+  {"OP1W.SDT", 336, 400, 1}, /* ÂçÉÈ∂¥ */
+  {"OP2W.SDT", 448, 512, 1}, /*  Ê¢ì  */
+  {"OP3W.SDT", 448, 512, 2}, /*  Ê•ì  */
+  {"OP4W.SDT", 336, 400, 2}, /* ÂàùÈü≥ */
+  {"OP2_KM_W.SDT", 1280, 400, 0}, /* ÂΩ± */
 };
 
 Image *
@@ -57,7 +57,7 @@ lvnsimage_load_sdt(const u_char *data, const char *name)
     size = data[0] | (data[1]<<8) | (data[2]<<16) | (data[3]<<24);
     leafpack_lzs2(data + 4, ret->data, size);
 
-    /* æÂ≤º»ø≈æ */
+    /* ‰∏ä‰∏ãÂèçËª¢ */
     {
         int i, j;
         for (i=0; i<height/2; i++) {
